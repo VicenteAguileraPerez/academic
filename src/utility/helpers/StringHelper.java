@@ -59,9 +59,15 @@ public class StringHelper
     	return text.length()>=limit;
     }
 	
-	public boolean justNumbers(String text,int limit) 
+    public boolean justNumbersRange(String text,int limit) 
 	{
 		String EXPNUM="(\\d{1,"+limit+"})";
+		
+		return Pattern.matches(EXPNUM, text);
+	}
+	public boolean justNumbersEqualToLimit(String text,int limit) 
+	{
+		String EXPNUM="(\\d{"+limit+"})";
 		
 		return Pattern.matches(EXPNUM, text);
 	}

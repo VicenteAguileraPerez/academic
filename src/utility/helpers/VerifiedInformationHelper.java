@@ -33,7 +33,7 @@ public class VerifiedInformationHelper
 		String notes = jsonObject.getString(keys.get(4));	
 			
 	
-		if(control_number.length()==8)
+		if(stringHelper.justNumbersEqualToLimit(control_number, 8))
 		{
 			boolcontrol = true;
 		}
@@ -59,7 +59,7 @@ public class VerifiedInformationHelper
 			jsonObject.put("career", career);
 			boolcareer=true;
 		}
-		if(stringHelper.justNumbers(age, 3))
+		if(stringHelper.justNumbersRange(age, 3))
 		{
 			boolage=true;
 		}
