@@ -65,6 +65,7 @@ public class Student extends HttpServlet
 			try
 			{
 				
+				
 				if(idStudent!=null && !idStudent.isBlank()) 
 				{
 					System.out.println("params"+page+" "+idStudent);
